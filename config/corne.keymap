@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        adjust {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -35,10 +44,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp LBRC         &kp N7        &kp N8        &kp N9        &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp RIGHT_BRACE  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp UNDERSCORE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                        &kp LGUI      &none         &kp ENTER       &kp RET          &trans        &kp RALT
+&kp TAB    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp SLASH   &kp N7        &kp N8        &kp N9        &kp N0  &kp BSPC
+&trans     &kp LC(A)  &trans     &trans     &trans     &trans       &trans      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&kp LSHFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans       &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                 &kp LGUI   &none      &kp ENTER    &kp RET     &trans        &kp RALT
             >;
         };
 
@@ -59,10 +68,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
 
