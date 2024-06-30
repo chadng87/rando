@@ -24,7 +24,7 @@
 
         lockwindows {
             bindings = <&kp C_AL_LOCK>;
-            key-positions = <39 40 41>;
+            key-positions = <21 20>;
         };
     };
 
