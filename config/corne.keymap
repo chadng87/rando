@@ -23,7 +23,7 @@
         };
 
         lockwindows {
-            bindings = <&kp K_LOCK>;
+            bindings = <&kp RA(C_AL_LOCK)>;
             key-positions = <21 20>;
         };
     };
