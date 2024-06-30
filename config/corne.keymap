@@ -13,8 +13,18 @@
         compatible = "zmk,combos";
 
         adjust {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <37 40>;
+        };
+
+        capslock {
+            bindings = <&caps_word>;
+            key-positions = <4 3>;
+        };
+
+        lockwindows {
+            bindings = <&kp K_LOCK>;
+            key-positions = <39 40 41>;
         };
     };
 
@@ -29,10 +39,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp LEFT_ALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &mo 3
+&kp ESCAPE  &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                          &kp LEFT_CONTROL  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
@@ -44,10 +54,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans     &trans     &kp INS    &kp HOME   &kp END    &kp PAGE_UP      &kp BACKSLASH  &kp N7        &kp N8        &kp N9        &trans  &kp BSPC
-&kp TAB    &kp LC(A)  &trans     &trans     &kp LC(F)  &kp PAGE_DOWN    &kp PERIOD     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&kp LSHFT  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT_WIN     &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                 &trans     &none      &kp ENTER        &kp SPACE      &trans        &trans
+&trans     &trans  &trans  &kp INS     &kp HOME  &kp PAGE_UP      &kp BACKSLASH  &kp N7        &kp N8        &kp N9        &trans  &kp BSPC
+&kp TAB    &trans  &trans  &kp DELETE  &kp END   &kp PAGE_DOWN    &kp PERIOD     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&kp LSHFT  &trans  &trans  &trans      &trans    &kp LEFT_WIN     &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                           &trans      &none     &kp ENTER        &kp SPACE      &trans        &trans
             >;
         };
 
@@ -66,30 +76,12 @@
             >;
         };
 
-        functions {
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         bluetooth {
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans   &trans   &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans   &trans   &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
